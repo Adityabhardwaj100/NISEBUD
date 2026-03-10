@@ -28,10 +28,17 @@ const AuthContext = createContext<{
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<User | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [user, setUser] = useState<User | null>({
+        id: 'mock-id',
+        name: 'Vansh Gupta',
+        email: 'vansh@example.com',
+        profilePicture: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80&h=80&fit=crop',
+    });
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
+        // Disabled backend auth check for unrestricted access
+        /*
         const fetchUser = async () => {
             try {
                 const res = await api.get('/api/user');
@@ -43,6 +50,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             }
         };
         fetchUser();
+        */
     }, []);
 
     const login = () => {
