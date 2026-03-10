@@ -83,7 +83,7 @@ export default function DashboardPage() {
 
     useEffect(() => {
         if (mounted && !loading && !user) {
-            window.location.href = 'http://46.202.162.116:5000/auth/google';
+            window.location.href = 'http://localhost:5000/auth/google';
         }
     }, [mounted, loading, user]);
 

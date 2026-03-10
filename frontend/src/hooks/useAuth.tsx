@@ -4,7 +4,7 @@ import { useState, useEffect, createContext, useContext } from 'react';
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://46.202.162.116:5000',
+    baseURL: 'http://localhost:5000',
     withCredentials: true,
 });
 
@@ -46,11 +46,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }, []);
 
     const login = () => {
-        window.location.href = 'http://46.202.162.116:5000/auth/google';
+        window.location.href = 'http://localhost:5000/auth/google';
     };
 
     const logout = () => {
-        window.location.href = 'http://46.202.162.116:5000/auth/logout';
+        window.location.href = 'http://localhost:5000/auth/logout';
     };
 
     return (
