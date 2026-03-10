@@ -1,0 +1,12 @@
+node_modules
+.env
+.env*
+.next
+build
+dist
+*.log
+.DS_Store
+frontend/node_modules
+backend/node_modules
+frontend/.next
+backend/dist
