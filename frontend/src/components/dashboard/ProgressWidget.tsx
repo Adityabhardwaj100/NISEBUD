@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CheckCircle2, Flame, Award } from 'lucide-react';
+import Link from 'next/link';
 
 interface Stats {
     coursesCompleted: number;
@@ -52,7 +53,7 @@ export default function ProgressWidget({ stats }: { stats: Stats }) {
             <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm">
                 <div className="flex items-center justify-between mb-6">
                     <h3 className="text-lg font-bold text-gray-800">Achievements</h3>
-                    <button className="text-xs font-bold text-blue-600 hover:text-blue-700">View All</button>
+                    <Link href="/achievements" className="text-xs font-bold text-blue-600 hover:text-blue-700">View All</Link>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4">
